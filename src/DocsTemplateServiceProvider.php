@@ -17,10 +17,10 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
          *
          * More info: https://github.com/spatie/laravel-package-tools
          */
-        $packageName = 'prezet/docs-template'; // Define package name
+        $packageName = 'prezet/blog-template'; // Define package name
 
         $package
-            ->name('docs-template')
+            ->name('blog-template')
             ->hasViews()
             ->hasInstallCommand(function (InstallCommand $command) use ($packageName) {
                 $command->startWith(function (InstallCommand $command) use ($packageName) {

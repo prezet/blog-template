@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Prezet\Prezet\Data\DocumentData;
 use Prezet\Prezet\Models\Document;
-use Prezet\Prezet\Prezet;
+
 
 class IndexController
 {
@@ -14,6 +14,7 @@ class IndexController
     {
         $category = $request->input('category');
         $tag = $request->input('tag');
+        $author = $request->input('author');
 
         $query = app(Document::class)::where('draft', false);
 
@@ -27,18 +28,29 @@ class IndexController
             });
         }
 
-        $nav = Prezet::getSummary();
-        $docs = $query->orderBy('created_at', 'desc')
-            ->paginate(4);
+        // Filter by author if provided
+        if ($author) {
+            $query->where('frontmatter->author', $author);
+        }
+
+        $currentAuthor = config('prezet.authors.' . $author);
+
+        $docs = $query->orderBy('created_at', 'desc')->get();
 
         $docsData = $docs->map(fn (Document $doc) => app(DocumentData::class)::fromModel($doc));
 
+        // Group posts by year
+        $postsByYear = $docsData->groupBy(function($post) {
+            return $post->createdAt->format('Y');
+        })->sortKeysDesc();
+
         return view('prezet.index', [
-            'nav' => $nav,
             'articles' => $docsData,
             'paginator' => $docs,
-            'currentTag' => request()->query('tag'),
-            'currentCategory' => request()->query('category'),
+            'currentTag' => $request->query('tag'),
+            'currentCategory' => $request->query('category'),
+            'currentAuthor' => $currentAuthor,
+            'postsByYear' => $postsByYear,
         ]);
     }
 }

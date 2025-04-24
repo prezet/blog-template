@@ -27,32 +27,28 @@
         ></script>
         @vite(['resources/css/prezet.css'])
         @stack('jsonld')
+
+        <script>
+            ;(function () {
+                const stored = localStorage.getItem('theme')
+                const prefersDark = window.matchMedia(
+                    '(prefers-color-scheme: dark)'
+                ).matches
+                const useDark =
+                    stored === 'dark' || (stored === null && prefersDark)
+
+                if (useDark) {
+                    document.documentElement.classList.add('dark')
+                }
+            })()
+        </script>
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased dark:bg-zinc-900">
         <div class="min-h-screen">
-            <x-prezet.alpine>
-                <x-prezet.header />
-                <div
-                    class="max-w-8xl relative mx-auto flex w-full flex-auto justify-center sm:px-2 lg:px-8 xl:px-12"
-                >
-                    {{-- Left Sidebar --}}
-                    @if (isset($left))
-                        {{ $left }}
-                    @endif
-
-                    {{-- Main Content --}}
-                    <main
-                        class="max-w-2xl min-w-0 flex-auto px-4 py-16 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16"
-                    >
-                        {{ $slot }}
-                    </main>
-
-                    {{-- Right Sidebar --}}
-                    @if (isset($right))
-                        {{ $right }}
-                    @endif
-                </div>
-            </x-prezet.alpine>
+            <x-prezet.header />
+            <div class="container">
+                {{ $slot }}
+            </div>
         </div>
     </body>
 </html>

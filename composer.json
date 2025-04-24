@@ -1,12 +1,12 @@
 {
-    "name": "prezet/docs-template",
+    "name": "prezet/blog-template",
     "description": "Official documentation template for the Prezet markdown blogging engine",
     "keywords": [
         "Prezet",
         "laravel",
-        "docs-template"
+        "blog-template"
     ],
-    "homepage": "https://github.com/prezet/docs-template",
+    "homepage": "https://github.com/prezet/blog-template",
     "license": "MIT",
     "authors": [
         {

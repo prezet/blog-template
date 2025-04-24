@@ -16,6 +16,8 @@ class ShowController
         $html = Prezet::parseMarkdown($md)->getContent();
         $headings = Prezet::getHeadings($html);
         $docData = Prezet::getDocumentDataFromFile($doc->filepath);
+        $authorKey = $docData->frontmatter->author;
+        $author = config('prezet.authors.' . $authorKey, null);
         $linkedData = json_encode(Prezet::getLinkedData($docData), JSON_UNESCAPED_SLASHES);
 
         return view('prezet.show', [
@@ -24,6 +26,7 @@ class ShowController
             'headings' => $headings,
             'body' => $html,
             'nav' => $nav,
+            'author' => $author,
         ]);
     }
 }
