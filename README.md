@@ -6,7 +6,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/prezet/blog-template/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/prezet/blog-template/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/prezet/blog-template/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/prezet/blog-template/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 
-This package provides a documentation-focused starting template for the [Prezet Markdown Blogging Engine](https://github.com/benbjurstrom/prezet) [[1]](https://github.com/benbjurstrom/prezet). It sets up routes, controllers, views, CSS, and content structure suitable for project documentation.
+This package provides a blogging-focused starting template for the [Prezet Markdown Blogging Engine](https://github.com/benbjurstrom/prezet) [[1]](https://github.com/benbjurstrom/prezet). It sets up routes, controllers, views, CSS, and content structure suitable for a blog site.
 
 The installer copies the necessary files into your Laravel application and then removes this package, leaving you with the template files to modify as needed.
 
