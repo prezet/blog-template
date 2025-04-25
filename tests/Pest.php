@@ -1,5 +1,5 @@
 <?php
 
-use Prezet\DocsTemplate\Tests\TestCase;
+use Prezet\BlogTemplate\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

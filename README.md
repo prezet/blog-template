@@ -1,6 +1,7 @@
-# Official Documentation Template for Prezet
+# Official Blogging Template for Prezet
 
-![prezet-local test_prezet_features_images(1280x720)](https://github.com/user-attachments/assets/aa95eb4c-5084-47a8-8311-ae53d989620f)
+![prezet-blog-light](https://github.com/user-attachments/assets/7e8a1765-8584-4e9a-99f3-b23b1a75129d)
+![prezet-blog-dark](https://github.com/user-attachments/assets/51007484-b2c0-40c7-858f-2c8f6e0f657d)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/prezet/blog-template.svg?style=flat-square)](https://packagist.org/packages/prezet/blog-template)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/prezet/blog-template/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/prezet/blog-template/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -45,7 +46,7 @@ your-laravel-app/
 │   │   └── prezet.css      # Contains the Tailwind v4 CSS
 │   └── views/
 │       ├── components/
-│       │   └── prezet/     # A collection of Blade components used in the documentation
+│       │   └── prezet/     # A collection of Blade components used in the template
 │       └── prezet/         # Page level Blade views for the index, show, and ogimage routes
 ├── prezet/                 # Example content containng markdown files and images
 ├── package.json            # Modified with added node dependencies

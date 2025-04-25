@@ -1,6 +1,6 @@
 <?php
 
-namespace Prezet\DocsTemplate;
+namespace Prezet\BlogTemplate;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Process;
@@ -8,7 +8,7 @@ use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
-class DocsTemplateServiceProvider extends PackageServiceProvider
+class BlogTemplateServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {

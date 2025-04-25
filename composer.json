@@ -1,6 +1,6 @@
 {
     "name": "prezet/blog-template",
-    "description": "Official documentation template for the Prezet markdown blogging engine",
+    "description": "Official blogging template for the Prezet markdown blogging engine",
     "keywords": [
         "Prezet",
         "laravel",
@@ -35,12 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Prezet\\DocsTemplate\\": "src/"
+            "Prezet\\BlogTemplate\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Prezet\\DocsTemplate\\Tests\\": "tests/",
+            "Prezet\\BlogTemplate\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/",
             "App\\": "app/"
         }
@@ -63,7 +63,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Prezet\\DocsTemplate\\DocsTemplateServiceProvider"
+                "Prezet\\BlogTemplate\\BlogTemplateServiceProvider"
             ]
         }
     },
