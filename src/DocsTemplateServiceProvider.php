@@ -32,6 +32,7 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
                     $this->copyCss($command);
                     $this->copyContent($command);
                     $this->copyViteConfig($command);
+                    $this->addAuthors($command);
                     $this->installNodeDependencies($command);
                     Process::run('php artisan prezet:index --fresh');
 
@@ -154,6 +155,32 @@ class DocsTemplateServiceProvider extends PackageServiceProvider
         if ($fileExists) {
             $command->warn('Overwrote existing vite.config.js. Please review the file ('.$destination.') to ensure it meets your project\'s requirements.');
         }
+    }
+
+    protected function addAuthors(InstallCommand $command): void
+    {
+        $configFile = config_path('prezet.php');
+        $content = File::get($configFile);
+
+        $authorsTemplate = "'authors' => [
+        'bob' => [
+            '@type' => 'Person',
+            'name' => 'Bob Author',
+            'url' => 'https://prezet.com/authors/prezet',
+            'image' => '/prezet/img/bob.webp',
+            'bio' => 'Bob is a Laravel developer focusing on frontend tooling and testing practices. He enjoys exploring Blade, Vite, and ensuring application stability through robust testing.',
+        ],
+        'jane' => [
+            '@type' => 'Person',
+            'name' => 'Jane Author',
+            'url' => 'https://prezet.com/authors/prezet',
+            'image' => '/prezet/img/jane.webp',
+            'bio' => 'Jane is a backend developer specializing in Laravel\'s architecture and database interactions. She frequently writes about Eloquent, routing, queues, and application structure.',
+        ],";
+
+        $content = str_replace("'authors' => [", $authorsTemplate, $content);
+        File::put($configFile, $content);
+        $command->info('Added authors to prezet config.');
     }
 
     protected function installNodeDependencies(InstallCommand $command): void
