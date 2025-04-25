@@ -7,6 +7,8 @@
                 'article h2, article h3',
             )
 
+            console.log(headingElements)
+
             // Create an Intersection Observer
             const observer = new IntersectionObserver(
                 (entries) => {
