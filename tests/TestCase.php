@@ -1,11 +1,11 @@
 <?php
 
-namespace Prezet\DocsTemplate\Tests;
+namespace Prezet\BlogTemplate\Tests;
 
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Prezet\DocsTemplate\DocsTemplateServiceProvider;
+use Prezet\BlogTemplate\BlogTemplateServiceProvider;
 use Prezet\Prezet\PrezetServiceProvider;
 
 class TestCase extends Orchestra
@@ -18,7 +18,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            DocsTemplateServiceProvider::class,
+            BlogTemplateServiceProvider::class,
             PrezetServiceProvider::class,
         ];
     }

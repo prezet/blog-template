@@ -1,8 +1,8 @@
 <?php
 
-namespace Prezet\DocsTemplate\Tests\Feature\Http\Controllers;
+namespace Prezet\BlogTemplate\Tests\Feature\Http\Controllers;
 
-use Prezet\DocsTemplate\Tests\TestCase;
+use Prezet\BlogTemplate\Tests\TestCase;
 use Prezet\Prezet\Models\Document;
 use Prezet\Prezet\Models\Heading;
 
