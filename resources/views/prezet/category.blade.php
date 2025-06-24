@@ -8,9 +8,7 @@
 
     <x-prezet.alpine>
         <div class="mx-auto max-w-5xl space-y-8">
-            <div
-                class=""
-            >
+            <div class="">
                 <li class="flex items-center dark:text-white">
                     <span>
                         {{ $document->category }}
@@ -40,7 +38,7 @@
                 {!! $body !!}
             </article>
 
-            <div class="grid lg:grid-cols-2 gap-8">
+            <div class="grid gap-8 lg:grid-cols-2">
                 @foreach ($docs as $post)
                     <x-prezet.article
                         :article="$post"
@@ -48,7 +46,6 @@
                     />
                 @endforeach
             </div>
-
         </div>
     </x-prezet.alpine>
 </x-prezet.template>

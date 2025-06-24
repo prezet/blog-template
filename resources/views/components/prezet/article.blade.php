@@ -8,7 +8,7 @@
 >
     <div class="space-y-3">
         <div class="text-muted-foreground text-sm">
-            @if($article->category)
+            @if ($article->category)
                 <a
                     href="{{ route('prezet.show', ['slug' => strtolower($article->category)]) }}"
                     class="font-medium text-zinc-900 transition-all hover:opacity-75 dark:text-white"
