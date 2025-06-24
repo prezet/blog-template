@@ -26,11 +26,13 @@
                 class="col-span-12 xl:col-span-10 xl:col-start-2 2xl:col-span-6 2xl:col-start-4"
             >
                 <li class="flex items-center dark:text-white">
-                    <a
-                        href="{{ route('prezet.index', ['category' => $document->category]) }}"
-                    >
-                        {{ $document->category }}
-                    </a>
+                    @if($document->category)
+                        <a
+                            href="{{ route('prezet.show', ['slug' => strtolower($document->category)]) }}"
+                        >
+                            {{ $document->category }}
+                        </a>
+                    @endif
                 </li>
 
                 <h1
