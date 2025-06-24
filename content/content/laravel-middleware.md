@@ -1,7 +1,6 @@
 ---
 title: Laravel Middleware Explained
 date: 2023-08-11
-category: Laravel
 excerpt: Learn how middleware can filter HTTP requests entering your application.
 image: /prezet/img/ogimages/laravel-middleware.webp
 author: bob

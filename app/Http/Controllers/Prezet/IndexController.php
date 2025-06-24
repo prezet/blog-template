@@ -15,7 +15,9 @@ class IndexController
         $tag = $request->input('tag');
         $author = $request->input('author');
 
-        $query = app(Document::class)::where('draft', false);
+        $query = app(Document::class)::query()
+            ->where('content_type', 'article')
+            ->where('draft', false);
 
         if ($category) {
             $query->where('category', $category);

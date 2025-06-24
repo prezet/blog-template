@@ -1,11 +1,11 @@
 ---
 title: Painless Testing in Laravel
 date: 2025-01-10
-category: Laravel
+category: Testing
 excerpt: An introduction to writing unit and feature tests for your Laravel applications.
 image: /prezet/img/ogimages/laravel-testing.webp
 author: bob
-tags: [testing, phpunit, tdd]
+tags: [phpunit, tdd]
 ---
 
 Laravel is built with testing in mind. Support for testing with PHPUnit is included out of the box, and a `phpunit.xml` file is already set up for your application. Laravel classifies tests into two main categories: Feature tests and Unit tests.

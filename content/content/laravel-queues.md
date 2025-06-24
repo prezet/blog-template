@@ -1,7 +1,6 @@
 ---
 title: Processing Jobs with Laravel Queues
 date: 2024-05-05
-category: Laravel
 excerpt: Understand how to defer time-consuming tasks using Laravel's queue system.
 image: /prezet/img/ogimages/laravel-queues.webp
 author: jane
