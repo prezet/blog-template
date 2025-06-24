@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Eloquent ORM
 date: 2023-04-15
-category: Laravel
 excerpt: Learn the fundamentals of Laravel's Eloquent ORM for interacting with your database.
 image: /prezet/img/ogimages/laravel-eloquent.webp
 author: jane

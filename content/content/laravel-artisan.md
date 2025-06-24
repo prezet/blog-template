@@ -1,7 +1,6 @@
 ---
 title: Exploring the Artisan Console
 date: 2023-12-05
-category: Laravel
 excerpt: Discover the power of Laravel's command-line interface, Artisan.
 image: /prezet/img/ogimages/laravel-artisan.webp
 author: jane

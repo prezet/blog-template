@@ -8,12 +8,14 @@
 >
     <div class="space-y-3">
         <div class="text-muted-foreground text-sm">
-            <a
-                href="{{ route('prezet.index', ['category' => $article->category]) }}"
-                class="font-medium text-zinc-900 transition-all hover:opacity-75 dark:text-white"
-            >
-                {{ $article->category }}
-            </a>
+            @if($article->category)
+                <a
+                    href="{{ route('prezet.show', ['slug' => strtolower($article->category)]) }}"
+                    class="font-medium text-zinc-900 transition-all hover:opacity-75 dark:text-white"
+                >
+                    {{ $article->category }}
+                </a>
+            @endif
         </div>
 
         <h2

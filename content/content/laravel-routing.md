@@ -1,7 +1,6 @@
 ---
 title: Understanding Laravel Routing
 date: 2024-01-20
-category: Laravel
 excerpt: Explore how Laravel handles incoming requests using its flexible routing system.
 image: /prezet/img/ogimages/laravel-routing.webp
 author: jane
