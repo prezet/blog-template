@@ -17,7 +17,7 @@ class ShowController
         $html = Prezet::parseMarkdown($md)->getContent();
         $docData = Prezet::getDocumentDataFromFile($doc->filepath);
 
-        if($docData->contentType === 'category') {
+        if ($docData->contentType === 'category') {
             $docs = app(Document::class)::query()
                 ->where('content_type', 'article')
                 ->where('draft', false)
