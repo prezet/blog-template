@@ -71,7 +71,9 @@
                         class="flex items-center gap-1 text-zinc-600 dark:text-zinc-400"
                     >
                         <x-prezet.icon-calendar class="size-5" />
-                        <span>Dec 05, 2023</span>
+                        <time datetime="{{ $document->createdAt->toIso8601String() }}">
+                            {{ $document->createdAt->format('F j, Y') }}
+                        </time>
                     </li>
                 </ul>
             </div>
